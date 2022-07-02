@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../config/styles.dart';
 
 class SCFlatButton extends StatelessWidget {
   final Widget child;
@@ -12,7 +13,19 @@ class SCFlatButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+          primary: (backgroundColor ?? Styles.primaryHighlightColor),
+          onPrimary: (textColor ?? Colors.white),
+          elevation: 1,
+          textStyle: const TextStyle(
+              fontFamily: Styles.primaryFontRegular,
+              fontWeight: Styles.primaryFontWeightLight,
+              fontSize: Styles.primaryButtonFontSize),
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(5.0)))),
+      child: child,
+      onPressed: onTap,
+    );
   }
 }
