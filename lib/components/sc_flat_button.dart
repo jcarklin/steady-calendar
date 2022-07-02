@@ -24,8 +24,8 @@ class SCFlatButton extends StatelessWidget {
               fontSize: Styles.primaryButtonFontSize),
           shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(5.0)))),
-      child: child,
       onPressed: onTap,
+      child: child,
     );
   }
 }
