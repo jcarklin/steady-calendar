@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'screens/cal_pager/cal_pager.dart';
 import 'screens/intro/intro.dart';
+import 'screens/login_options/login_options.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -13,8 +15,8 @@ class App extends StatelessWidget {
       routes: {
         //Splash.routeName: (context) => Splash(),
         Intro.routeName: (context) => const Intro(),
-        //LoginOptions.routeName: (context) => LoginOptions(),
-        //CalPager.routeName: (context) => CalPager(),
+        LoginOptions.routeName: (context) => LoginOptions(),
+        CalPager.routeName: (context) => CalPager(),
       },
     );
   }
